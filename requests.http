@@ -1,0 +1,33 @@
+//para introducir un usuario en tabla usuario.
+POST http://localhost:3000/Usuario
+Content-Type: application/json
+
+{
+  "Correo": "test@gmail.com",
+  "Nombre": "usuario de prueba"
+}
+
+###
+//para renombre una id
+PUT http://localhost:3000/Usuario/1
+Content-Type: application/json
+
+{
+  "Correo": "nuevocorreodeprueba@gmail.com",
+  "Nombre": "Nuevo Nombre"
+}
+
+###
+//borrar usuarios por ID
+DELETE http://localhost:3000/Usuario/1
+
+
+###
+//para ver lista de usuarios
+GET http://localhost:3000/Usuario
+
+###
+// para resetear los IDs y borrar todos los ID de usuarios y asi al poner uno nuevo empiece por el 1. 
+DELETE http://localhost:3000/reset
+
+###
